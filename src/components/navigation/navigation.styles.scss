@@ -1,0 +1,37 @@
+.navigation {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: 	#333333;
+  font-family: 'Yuji Syuku', serif;
+  
+  .logo-container {
+    height: 100%;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 30px;
+  }
+
+  .nav-links-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .nav-link {
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 20px;
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-link:hover {
+      transform: scale(1.1);
+    }
+  }
+}
