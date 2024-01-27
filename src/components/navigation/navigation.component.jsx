@@ -17,7 +17,7 @@ const Navigation = () => {
                     <Link className="nav-link" to='/sign-in'>
                         泳隊成員
                     </Link>
-                    <Link className="nav-link" to='/shop'>
+                    <Link className="nav-link" to='/inquiry'>
                         成績查詢
                     </Link>
                     <Link className="nav-link" to='/sign-in'>
