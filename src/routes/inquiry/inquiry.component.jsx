@@ -1,3 +1,4 @@
+import Dropdown from '../../components/dropdown/dropdown.component';
 import './inquiry.styles.scss'
 import { Bar } from 'react-chartjs-2';
 import Chart from 'chart.js/auto';
@@ -19,6 +20,15 @@ const data = {
 const Inquiry = () => {
     return (
         <div className='container'>
+            <div class="selection-container">
+                <Dropdown /> 
+            
+                <Dropdown /> 
+            
+                <Dropdown /> 
+            
+            </div>
+
             <div>
                 <h2>My Bar Chart</h2>
                 <Bar data={data} /> 

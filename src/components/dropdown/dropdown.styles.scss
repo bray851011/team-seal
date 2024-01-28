@@ -1,0 +1,13 @@
+.dropdown-container {
+    // flex-grow: 1; /* Dropdowns take equal width */
+    height: 50px;
+    width: 30%;
+    // border-radius: 10%;
+
+    .dropdown {
+        height: 100%;
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+}
