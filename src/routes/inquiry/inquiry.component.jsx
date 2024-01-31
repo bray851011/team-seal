@@ -1,23 +1,10 @@
 import { useState } from 'react';
 import Dropdown from '../../components/dropdown/dropdown.component';
 import './inquiry.styles.scss'
-import { Bar } from 'react-chartjs-2';
+import { Bar, Line } from 'react-chartjs-2';
 import Chart from 'chart.js/auto';
 
-const data = {
-    labels: ['10/10', 'February', 'March', 'April', 'May', 'June', 'July'],
-    datasets: [
-      {
-        label: 'My First dataset',
-        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-        borderColor: 'rgba(255, 99, 132, 1)',
-        borderWidth: 1,
-        hoverBackgroundColor: 'rgba(255, 99, 132, 0.4)',
-        hoverBorderColor: 'rgba(255, 99, 132, 1)',
-        data: [65, 59, 80, 81, 56, 55, 100]
-      }
-    ]
-  };
+
 
 const Inquiry = () => {
     const categories = [
@@ -29,6 +16,55 @@ const Inquiry = () => {
     ]
     const [limit, setLimit] = useState(5);
     const [category, setCategory] = useState('50M自由式');
+
+    const data = {
+        labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6'],
+        datasets: [
+          {
+            label: 'Dataset',
+            data: [65, 59, 80, 81, 56, 55, 40],
+            borderColor:'rgb(75, 192, 192)',
+            backgroundColor:'rgb(75, 192, 192)',
+            pointStyle: 'circle',
+            pointRadius: 10,
+            pointHoverRadius: 15
+          }
+        ]
+      };
+    const options = {
+        animations: {
+            y: {
+                easing: 'easeInOutElastic',
+                from: (ctx) => {
+                  if (ctx.type === 'data') {
+                    if (ctx.mode === 'default' && !ctx.dropped) {
+                      ctx.dropped = true;
+                      return 0;
+                    }
+                  }
+                }
+            },
+            radius: {
+              duration: 400,
+              easing: 'linear',
+              loop: (context) => context.active
+            }
+          },
+          hoverRadius: 12,
+          hoverBackgroundColor: 'yellow',
+          interaction: {
+            mode: 'nearest',
+            intersect: false,
+            axis: 'x'
+          },
+          plugins: {
+            tooltip: {
+              enabled: true
+            }
+          } 
+          
+    }
+
     return (
         <div className='container'>
             <div className="selection-container">
@@ -61,20 +97,11 @@ const Inquiry = () => {
             <p>Your favorite fruit: {category}</p>
             <p>Your favorite fruit: {limit}</p>
 
-            <div className='detail-container'>
-                <p>asdf</p>
-                <p>asdfasdf</p>
-            </div>
-
             <div>
                 <h2>My Bar Chart</h2>
-                <Bar data={data} /> 
+                <Line data={data} options={options} /> 
             </div>
 
-            <div>
-                <h2>My Bar Chart</h2>
-                <Bar data={data} /> 
-            </div>
         </div>  
     )
 }
