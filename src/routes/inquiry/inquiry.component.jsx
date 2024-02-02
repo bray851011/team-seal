@@ -4,6 +4,13 @@ import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 import axios from 'axios';
 
+// Utility function to format time values to "MM:SS"
+const formatTime = (value) => {
+  const minutes = Math.floor(value / 60);
+  const seconds = value - (60 * minutes);
+  return `${minutes}:${seconds}`
+};
+
 const Get_List_Of_Member = (url) => {
   const [nameList, setNameList] = useState([]);
   
@@ -30,10 +37,9 @@ const Inquiry = () => {
     ]
     const nameList = Get_List_Of_Member('http://127.0.0.1:8000/members');
     const [label, setLabels] = useState([]);
-    console.log(nameList[0])
-    const [member, setMember] = useState(nameList[0]);
-    const [limit, setLimit] = useState(5);
-    const [category, setCategory] = useState('25M自由式');
+    const [member, setMember] = useState('阮柏睿');
+    const [limit, setLimit] = useState(0);
+    const [category, setCategory] = useState('50M自由式');
 
     useEffect(() => {
       const url = `http://127.0.0.1:8000/results/?member=${member}&category=${category}&limit=${limit}`;
@@ -53,8 +59,8 @@ const Inquiry = () => {
         {
           label: '個人成績',
           data: label[0],
-          borderColor:'rgb(75, 192, 192)',
-          backgroundColor:'rgb(75, 192, 192)',
+          borderColor:'rgb(175, 0, 192)',
+          backgroundColor:'rgb(75, 0, 192)',
           pointStyle: 'circle',
           pointRadius: 10,
           pointHoverRadius: 15
@@ -62,18 +68,29 @@ const Inquiry = () => {
       ]
     };
   const options = {
-      animations: {
-          y: {
-              easing: 'easeInOutElastic',
-              from: (ctx) => {
-                if (ctx.type === 'data') {
-                  if (ctx.mode === 'default' && !ctx.dropped) {
-                    ctx.dropped = true;
-                    return 0;
-                  }
-                }
-              }
+    scales: {
+      y: {
+        // beginAtZero: true,
+        ticks: {
+          // Use the formatTime function to format Y-axis tick labels
+          callback: function(value, index, ticks) {
+            return formatTime(value);
           },
+        },
+      }
+    },
+    animations: {
+      y: {
+        easing: 'easeInOutElastic',
+        from: (ctx) => {
+          if (ctx.type === 'data') {
+            if (ctx.mode === 'default' && !ctx.dropped) {
+              ctx.dropped = true;
+              return 0;
+            }
+          }
+        }
+      },
           radius: {
             duration: 400,
             easing: 'linear',
@@ -101,6 +118,7 @@ const Inquiry = () => {
                 <div className="dropdown-container">
                   <select 
                     className='dropdown'
+                    value={member}
                     onChange={e => setMember(e.target.value)}
                   >
                     {nameList.map((name) => (
@@ -112,6 +130,7 @@ const Inquiry = () => {
                 <div className="dropdown-container">
                     <select 
                         className='dropdown'
+                        value={category}
                         onChange={e => setCategory(e.target.value)}
                     >
                         {categories.map((category) => (
@@ -125,10 +144,10 @@ const Inquiry = () => {
                         className='dropdown'
                         onChange={e => setLimit(e.target.value)}
                     >
+                      <option value="0">全部</option> 
                         <option value="5">近五筆</option>
                         <option value="10">近十筆</option>
                         <option value="20">近二十筆</option>
-                        <option value="0">全部</option>
                     </select>
                 </div>
             </div>
