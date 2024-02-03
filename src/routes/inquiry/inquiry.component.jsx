@@ -112,7 +112,7 @@ const Inquiry = () => {
   }
 
     return (
-        <div className='container'>
+        <div className='inquiry-container'>
             <div className="selection-container">
                 <div className="dropdown-container">
                   <select 

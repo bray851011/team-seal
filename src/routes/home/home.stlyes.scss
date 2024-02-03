@@ -1,19 +1,62 @@
-// .container {
-//     display: flex;
-//     background-color: #333333;
-//     color: white;
-//     margin-top: 60px;
-//     height: 80vh;
-//     margin-right: 20vw;  /* 30% of the viewport width */
-//     margin-left: 20vw; /* 30% of the viewport width */
-//     // margin-bottom: 20vh; /* 30% of the viewport width */
+.container {
+    display: flex;
+    // background-color: #333333;
+    color: white;
+    margin-top: 60px;
+    height: 80vh;
+    margin-right: 20vw;  /* 30% of the viewport width */
+    margin-left: 20vw; /* 30% of the viewport width */
+    // margin-bottom: 20vh; /* 30% of the viewport width */
     
-//     .left-container {
-//         flex: 1;
-//     }
+    
+    .left-container {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
 
-//     .right-container {
-//         flex: 1;
-//     }
-// }
+        .fade-in-left {
+            height: 50%;
+            animation: fadeInLeft 1s ease-out forwards; /* Adjust duration and easing as needed */
+        }
+        .fade-in-right {
+            height: 18%;
+            animation: fadeInRight 1s ease-out forwards; /* Adjust duration and easing as needed */
+        }
+    }
+      
+    .right-container {
+        flex: 1;
+        font-size: x-large;
+        justify-content: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+        
+        .team-name {
+            margin-top: 10%;
+            font-family: 'Yuji Syuku', serif;
+        }
+    }
+}
 
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50%); /* Start from -50px to the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* End at the original position */
+  }
+}
+
+@keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50%); /* Start from -50px to the left */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* End at the original position */
+    }
+  }

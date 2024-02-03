@@ -23,17 +23,18 @@ const Navigation = () => {
     
         return () => clearInterval(interval); // Cleanup the interval on component unmount
       }, []);
+      
     return (
         <Fragment>
             <div className="navigation">
                 <Link className="logo-container" to='/'>
-                    <img src={seal} />
+                    <img src={seal} alt=""/>
                     <p className={fadeClass}>{linkTexts[currentIndex]}</p>
 
                 </Link>
                 <div className="nav-links-container">
                     <Link className="nav-link" to='/sign-in'>
-                        教練介紹
+                        團隊介紹
                     </Link>
                     <Link className="nav-link" to='/sign-in'>
                         泳隊成員
@@ -46,9 +47,6 @@ const Navigation = () => {
                     </Link>
                     <Link className="nav-link" to='/sign-in'>
                         贊助泳隊
-                    </Link>
-                    <Link className="nav-link" to='/sign-in'>
-                        加入泳隊
                     </Link>
                     <Link className="nav-link" to='/sign-in'>
                         登入系統
