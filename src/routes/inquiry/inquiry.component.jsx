@@ -8,7 +8,7 @@ import axios from 'axios';
 const formatTime = (value) => {
   const minutes = Math.floor(value / 60);
   const seconds = value - (60 * minutes);
-  return `${minutes}:${seconds}`
+  return `${minutes}:${seconds.toFixed(2)}`
 };
 
 const Get_List_Of_Member = (url) => {
@@ -59,8 +59,8 @@ const Inquiry = () => {
         {
           label: '個人成績',
           data: label[0],
-          borderColor:'rgb(175, 0, 192)',
-          backgroundColor:'rgb(75, 0, 192)',
+          borderColor:'white',
+          backgroundColor:'rgb(0, 153, 255)',
           pointStyle: 'circle',
           pointRadius: 10,
           pointHoverRadius: 15
@@ -70,7 +70,6 @@ const Inquiry = () => {
   const options = {
     scales: {
       y: {
-        // beginAtZero: true,
         ticks: {
           // Use the formatTime function to format Y-axis tick labels
           callback: function(value, index, ticks) {
@@ -98,7 +97,7 @@ const Inquiry = () => {
           }
         },
         hoverRadius: 12,
-        hoverBackgroundColor: 'yellow',
+        hoverBackgroundColor: 'red',
         interaction: {
           mode: 'nearest',
           intersect: false,
@@ -153,9 +152,8 @@ const Inquiry = () => {
             </div>
 
 
-            <div>
-                <h2>My Bar Chart</h2>
-                <Line data={data} options={options} /> 
+            <div className='chart-container'>
+              <Line data={data} options={options} /> 
             </div>
 
         </div>  
