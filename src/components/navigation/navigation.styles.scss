@@ -5,14 +5,39 @@
   justify-content: space-between;
   background-color: 	#333333;
   font-family: 'Yuji Syuku', serif;
-  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, color */
+
   .logo-container {
     height: 100%;
-    padding-left: 10px;
+    padding-left: 5px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-size: 30px;
+    font-size: 40px;
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+    
+    .fade-in {
+      animation: fadeIn 1s forwards;
+    }
+    
+    .fade-out {
+      animation: fadeOut 1s forwards;
+    }
+
+  }
+
+  img {
+    height: 85%;
+    margin-right: 10px;
   }
 
   .nav-links-container {
