@@ -34,9 +34,6 @@ const Navigation = () => {
                 </Link>
                 <div className="nav-links-container">
                     <Link className="nav-link" to='/sign-in'>
-                        團隊介紹
-                    </Link>
-                    <Link className="nav-link" to='/sign-in'>
                         泳隊成員
                     </Link>
                     <Link className="nav-link" to='/inquiry'>

@@ -26,15 +26,173 @@ const Home = () => {
 
     return (
         <div className={'container'}>
-            <div className='left-container'>
+            <div className='inner-container1'>
+                <div className='slide-container-rtl'>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>Team Seal</h1>
+                    </div>
+                </div>
+
                 <img src={logo} className='fade-in-right' alt=''/>
-                <img src={seal} className='fade-in-left' alt=''/>
+
+                <div className='slide-container-ltr'>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                    <div className='text-wrapper'>
+                        <h1>海豹泳隊</h1>
+                    </div>
+                </div>
             </div>
-            <div className='right-container'>
-                <h1 className='team-name'>新竹市海豹泳隊</h1>
-                <hr></hr>
-                <p className='cursor'>{typedText}</p>
-          
+
+            <div className='inner-container2'>
+                <div className='left-container'>
+                    <img src={seal} className='fade-in-left' alt=''/>
+                </div>
+                <div className='right-container'>
+                    <h1 className='team-name'>新竹市海豹泳隊</h1>
+                    <hr></hr>
+                    <p className='cursor'>{typedText}</p>
+                </div>
+            </div>
+            
+            <div className='inner-container1'>
+            
             </div>
         </div>
     )
