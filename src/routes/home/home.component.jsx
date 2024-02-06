@@ -179,7 +179,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
+        {/*
             <div className='inner-container2'>
                 <div className='left-container'>
                     <img src={seal} className='fade-in-left' alt=''/>
@@ -190,7 +190,7 @@ const Home = () => {
                     <p className='cursor'>{typedText}</p>
                 </div>
             </div>
-            
+    */}
             <div className='inner-container1'>
             
             </div>

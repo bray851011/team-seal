@@ -59,8 +59,8 @@ const Inquiry = () => {
         {
           label: '個人成績',
           data: label[0],
-          borderColor:'white',
-          backgroundColor:'rgb(0, 153, 255)',
+          borderColor:'gray',
+          backgroundColor:'rgb(52, 204, 255)',
           pointStyle: 'circle',
           pointRadius: 10,
           pointHoverRadius: 15
