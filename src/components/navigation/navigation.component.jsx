@@ -61,12 +61,13 @@ const Navigation = () => {
                     <Link className="nav-link" to='/sign-in' onClick={menuClick}>
                         比賽成果
                     </Link>
+    
                     <Link className="nav-link" to='/sign-in'>
                         贊助泳隊
                     </Link>
-                    <Link className="nav-link" to='/sign-in'>
+                    <Link className="nav-link" to='/login'>
                         登入系統
-                    </Link>
+                     </Link> 
                 </div>
             
             </div>

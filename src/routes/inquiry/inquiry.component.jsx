@@ -144,16 +144,16 @@ const Inquiry = () => {
                         onChange={e => setLimit(e.target.value)}
                     >
                       <option value="0">全部</option> 
-                        <option value="5">近五筆</option>
-                        <option value="10">近十筆</option>
-                        <option value="20">近二十筆</option>
+                      <option value="5">近五筆</option>
+                      <option value="10">近十筆</option>
+                      <option value="20">近二十筆</option>
                     </select>
                 </div>
             </div>
 
 
             <div className='chart-container'>
-              <Line data={data} options={options} /> 
+              <Line className='line' data={data} options={options} /> 
             </div>
 
         </div>  

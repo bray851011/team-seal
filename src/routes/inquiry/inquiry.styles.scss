@@ -1,12 +1,15 @@
 .inquiry-container {
     background-color: #e6e6e6;
     // color: white;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    // height: 80vh;
-    margin-right: 20vw;  /* 30% of the viewport width */
-    margin-left: 20vw; /* 30% of the viewport width */
-    // margin-bottom: 20vh; /* 30% of the viewport width */
+    // top: 70px;
+    // padding: 130px;
+    // margin-top: 70px;
+    // margin-bottom: 60px;
+    // // height: 80vh;
+    // margin-right: 20vw;  /* 30% of the viewport width */
+    // margin-left: 20vw; /* 30% of the viewport width */
+    // // margin-bottom: 20vh; /* 30% of the viewport width */
+    max-width: 1400px;
 
     .selection-container {
         display: flex; /* Use flexbox for horizontal alignment */
@@ -75,9 +78,6 @@
             border-style: solid;
             border-width: thin;
             border-radius: 5px;
-            .line {
-                height: 1000px;
-            }
         }
     }
 }
