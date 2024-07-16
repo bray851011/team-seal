@@ -1,145 +1,28 @@
-.container {
+.section1 {
+  height: 100vh;
+  width: 100%;
+  background-color: red;
+
+  .upper-container {
     display: flex;
-    flex-direction: column;
-    // background-color: #333333;
-    color: white;
-    // margin-top: 60px;
-    // height: 80vh;
-    // margin-right: 20vw;  /* 30% of the viewport width */
-    // margin-left: 20vw; /* 30% of the viewport width */
-    // margin-bottom: 20vh; /* 30% of the viewport width */
-    .inner-container1 {
-      display: flex;
-      flex-direction: column;
-      justify-content: center; /* Center items horizontally */
-      align-items: center; /* Center items vertically */
-      height: 100vh;
-      white-space: nowrap;
-      overflow: hidden;
-
-      img {
-        margin: 50px;
-        height: 15vh;
-        animation: fadeIn 8s;
-      }
-
-      .slide-container-rtl {
-        padding: 0;
-        animation: fadeIn 5s;
-        .text-wrapper {
-          display: inline-block;
-          animation: move-rtl 3000ms linear infinite;
-          h1  {
-            height: 40px;
-            margin: 0 10px;
-            font-family: 'Black Ops One', system-ui;
-            color: rgb(105, 105, 105);
-          }
-
-        }
-
-      }
-      .slide-container-ltr {
-        padding: 0;
-        animation: fadeIn 5s;
-        .text-wrapper {
-          display: inline-block;
-          animation: move-ltr 3000ms linear infinite;
-          h1  {
-            height: 40px;
-            margin: 0 10px;
-            font-family: 'Yuji Syuku', serif;
-            color: rgb(105, 105, 105);
-          }
-
-        }
-
-      }
-    }
+    justify-content: center;
+    height: 70vh;
+    width: 100%;
+    background-color: rgb(194, 194, 194);
     
-    .inner-container2 {
+    .container {
+      max-width: 1400px;
+      width: 100%;
+      height: 100%;
       display: flex;
-      height: 100vh;
-      .left-container {
-          display: flex;
-          flex: 1;
-          flex-direction: column;
-          justify-content: center; /* Center items horizontally */
-          align-items: center; /* Center items vertically */
-
-          .fade-in-left {
-              height: 50%;
-              animation: fadeInLeft 1s ease-out forwards; /* Adjust duration and easing as needed */
-          }
-          .fade-in-right {
-              height: 18%;
-              animation: fadeInRight 1s ease-out forwards; /* Adjust duration and easing as needed */
-          }
-      }
-      .right-container {
-        flex: 1;
-        font-size: x-large;
-        justify-content: center; /* Center items horizontally */
-        align-items: center; /* Center items vertically */
-        
-        .team-name {
-            margin-top: 10%;
-            font-family: 'Yuji Syuku', serif;
-            color: black;
-            font-weight: bold;
-        }
-
-        .cursor {
-            color: black;
-            font-weight: bold;
-        }
+      justify-content: center;
+      flex-direction: column;
     }
-    }
-
-
-}
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50%); /* Start from -50px to the left */
   }
-  to {
-    opacity: 1;
-    transform: translateX(0); /* End at the original position */
-  }
-}
 
-@keyframes fadeInRight {
-    from {
-      opacity: 0;
-      transform: translateX(50%); /* Start from -50px to the left */
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0); /* End at the original position */
-    }
-}
-
-@keyframes move-rtl {
-  from {
-    transform: translateX(0);
+  .lower-container {
+    height: 30vh;
+    width: 100%;
+    background-color: aliceblue;
   }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes move-ltr {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(100%);
-  }
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
 }
